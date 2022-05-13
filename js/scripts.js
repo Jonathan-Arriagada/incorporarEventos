@@ -1,3 +1,7 @@
+let precio
+let total = 0
+
+
 class producto {
     constructor(id,nombre,precio){
         this.id = id        
@@ -39,20 +43,31 @@ boton1.addEventListener('click', ()=> {
     Carrito.push(producto1)
     console.clear()
     console.log(Carrito)
+    MostrarTotal(1000)
 })
 boton2.addEventListener('click', ()=> {
     Carrito.push(producto2)
     console.clear()
     console.log(Carrito)
+    MostrarTotal(500)
 })
 boton3.addEventListener('click', ()=> {
     Carrito.push(producto3)
     console.clear()
     console.log(Carrito)
+    MostrarTotal(5000)
 })
 boton4.addEventListener('click', ()=> {
     Carrito.push(producto4)
     console.clear()
     console.log(Carrito)
+    MostrarTotal(3500)
 })
 
+alert("Ver carrito y total en consola")
+
+function MostrarTotal(precio){
+    total += precio
+    console.log(`Total: ${total}`)
+    
+}
